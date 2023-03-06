@@ -5,3 +5,8 @@ html, body, #root, .app, input {
   width: 100%;
   font-family: "Quicksand", sans-serif;
 }
+
+* {
+  transition-property: all;
+  transition-duration: 200ms
+}

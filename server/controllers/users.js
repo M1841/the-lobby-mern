@@ -21,7 +21,6 @@ export const getUserFollowees = async(req, res) => {
         );
         const formattedFollowees = followees.map(({
             _id,
-            username,
             firstName,
             lastName,
             location,
@@ -29,7 +28,6 @@ export const getUserFollowees = async(req, res) => {
         }) => {
             return {
                 _id,
-                username,
                 firstName,
                 lastName,
                 location,
@@ -51,7 +49,6 @@ export const getUserFollowers = async(req, res) => {
         );
         const formattedFollowers = followers.map(({
             _id,
-            username,
             firstName,
             lastName,
             location,
@@ -59,7 +56,6 @@ export const getUserFollowers = async(req, res) => {
         }) => {
             return {
                 _id,
-                username,
                 firstName,
                 lastName,
                 location,
@@ -94,7 +90,6 @@ export const followUnfollow = async(req, res) => {
         const followees = await Promise.all(user.followees.map((id) => User.findById(id)));
         const formattedFollowees = followees.map(({
             _id,
-            username,
             firstName,
             lastName,
             location,
@@ -102,7 +97,6 @@ export const followUnfollow = async(req, res) => {
         }) => {
             return {
                 _id,
-                username,
                 firstName,
                 lastName,
                 location,
